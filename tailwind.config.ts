@@ -47,6 +47,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        csl: {
+          section: "var(--csl-section-bg)",
+          text: "var(--csl-text-light)",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +61,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'csl-hero': 'var(--csl-hero-bg)',
+        'csl-overlay': 'var(--csl-hero-overlay)',
+        'csl-gradient': 'var(--csl-gradient-accent)',
+      },
+      boxShadow: {
+        'csl-card': 'var(--csl-card-shadow)',
+        'csl-hover': 'var(--csl-card-hover)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'spring': 'var(--transition-spring)',
       },
       borderRadius: {
         lg: "var(--radius)",
