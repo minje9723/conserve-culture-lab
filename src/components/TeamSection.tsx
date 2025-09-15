@@ -16,36 +16,36 @@ interface TeamMember {
 const TeamSection = () => {
   const teamMembers: TeamMember[] = [
     {
-      name: "김연구 교수",
-      position: "연구실 디렉터",
+      name: "Dr. Sarah Chen",
+      position: "Director & Principal Investigator",
       image: directorImage,
-      expertise: ["문화유산과학", "재료분석", "X선 스펙트로스코피"],
-      email: "kim.research@csl.edu",
-      bio: "문화유산 보존 분야에서 15년 이상의 경험을 가진 선도적인 연구자입니다."
+      expertise: ["Heritage Science", "Materials Analysis", "X-ray Spectroscopy"],
+      email: "sarah.chen@csl.edu",
+      bio: "Leading researcher in conservation science with 15+ years of experience in cultural heritage preservation."
     },
     {
-      name: "이분석 박사",
-      position: "박사후연구원", 
+      name: "Dr. Michael Rodriguez",
+      position: "Postdoctoral Research Fellow",
       image: postdocImage,
-      expertise: ["디지털 문서화", "3D 스캐닝", "이미징 기술"],
-      email: "lee.analysis@csl.edu",
-      bio: "고고학 및 예술 유산 문서화를 위한 첨단 이미징 기술 전문가입니다."
+      expertise: ["Digital Documentation", "3D Scanning", "Imaging Techniques"],
+      email: "m.rodriguez@csl.edu",
+      bio: "Specialist in advanced imaging technologies for archaeological and artistic heritage documentation."
     },
     {
-      name: "박보존 석사과정",
-      position: "대학원 연구조교",
+      name: "Emma Thompson",
+      position: "Graduate Research Assistant",
       image: directorImage, // Using placeholder
-      expertise: ["현미경 분석", "시료 준비", "데이터 분석"],
-      email: "park.conservation@csl.edu",
-      bio: "역사적 재료의 미세 분석 및 열화 과정 연구에 집중하는 박사과정 학생입니다."
+      expertise: ["Microscopy", "Sample Preparation", "Data Analysis"],
+      email: "e.thompson@csl.edu",
+      bio: "PhD candidate focusing on microscopic analysis of historical materials and degradation processes."
     },
     {
-      name: "정과학 박사",
-      position: "연구원",
+      name: "Dr. James Liu",
+      position: "Research Scientist",
       image: postdocImage, // Using placeholder
-      expertise: ["화학분석", "스펙트로스코피", "보존처리"],
-      email: "jung.science@csl.edu",
-      bio: "미술품 및 유물 보존을 위한 분석 화학 응용 전문가입니다."
+      expertise: ["Chemical Analysis", "Spectroscopy", "Conservation Treatment"],
+      email: "j.liu@csl.edu",
+      bio: "Expert in analytical chemistry applications for artwork and artifact conservation."
     }
   ];
 
@@ -54,10 +54,11 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            연구진 소개
+            Research Members
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            학제간 팀은 보존과학, 재료분석, 문화유산 보존 분야의 전문성을 결합합니다.
+            Our interdisciplinary team combines expertise in conservation science, 
+            materials analysis, and cultural heritage preservation.
           </p>
         </div>
 
@@ -106,7 +107,7 @@ const TeamSection = () => {
                       className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Mail className="w-4 h-4 mr-2" />
-                      <span className="text-sm">연락하기</span>
+                      <span className="text-sm">Contact</span>
                     </a>
                     <ExternalLink className="w-4 h-4 text-muted-foreground" />
                   </div>

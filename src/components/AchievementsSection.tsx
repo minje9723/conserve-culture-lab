@@ -114,11 +114,11 @@ const AchievementsSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            연구 성과
+            Research Achievements
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            우리의 연구 성과는 과학적 우수성과 보존과학 및 문화유산 보존 분야에 대한 
-            의미 있는 기여를 보여줍니다.
+            Our research outputs demonstrate scientific excellence and meaningful contributions 
+            to the field of conservation science and cultural heritage preservation.
           </p>
         </div>
 
