@@ -114,11 +114,11 @@ const GallerySection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Gallery
+            갤러리
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Visual documentation of our research activities, laboratory environment, 
-            fieldwork expeditions, and collaborative events.
+            연구 활동, 실험실 환경, 현장조사 및 협력 행사의 
+            시각적 기록을 담고 있습니다.
           </p>
         </div>
 

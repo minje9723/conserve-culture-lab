@@ -22,52 +22,52 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Digital Documentation of Medieval Manuscripts",
-      description: "Advanced imaging and spectroscopic analysis of illuminated manuscripts to understand historical pigments and deterioration patterns.",
-      category: "Digital Heritage",
+      title: "중세 필사본의 디지털 문서화",
+      description: "조명 필사본의 첨단 이미징 및 분광학적 분석을 통한 역사적 안료와 열화 패턴 연구",
+      category: "디지털 문화유산",
       status: "ongoing",
       duration: "2023-2025",
-      team: ["Dr. Sarah Chen", "Emma Thompson"],
-      keywords: ["Hyperspectral Imaging", "Pigment Analysis", "Medieval Art", "Digital Preservation"]
+      team: ["김연구 교수", "박보존 석사과정"],
+      keywords: ["하이퍼스펙트럴 이미징", "안료 분석", "중세 미술", "디지털 보존"]
     },
     {
       id: 2,
-      title: "Stone Conservation at Heritage Sites",
-      description: "Investigation of weathering mechanisms and development of sustainable conservation treatments for historic stone architecture.",
-      category: "Materials Science",
+      title: "문화유산 유적지 석재 보존",
+      description: "역사적 석조 건축물의 풍화 메커니즘 조사 및 지속가능한 보존 처리법 개발",
+      category: "재료과학",
       status: "ongoing",
-      duration: "2024-2026",
-      team: ["Dr. Michael Rodriguez", "Dr. James Liu"],
-      keywords: ["Stone Conservation", "Weathering", "Heritage Architecture", "Sustainable Treatment"]
+      duration: "2024-2026", 
+      team: ["이분석 박사", "정과학 박사"],
+      keywords: ["석재 보존", "풍화", "문화유산 건축", "지속가능한 처리"]
     },
     {
       id: 3,
-      title: "X-ray Analysis of Ancient Ceramics",
-      description: "Comprehensive study of ceramic production techniques and trade patterns in ancient civilizations using non-destructive X-ray methods.",
-      category: "Archaeological Science",
+      title: "고대 도자기의 X선 분석",
+      description: "비파괴 X선 방법을 이용한 고대 문명의 도자기 제작 기법 및 교역 패턴에 대한 종합적 연구",
+      category: "고고과학",
       status: "completed",
       duration: "2022-2023",
-      team: ["Dr. James Liu", "Dr. Sarah Chen"],
-      keywords: ["Ceramics", "X-ray Fluorescence", "Archaeological Analysis", "Ancient Technology"]
+      team: ["정과학 박사", "김연구 교수"],
+      keywords: ["도자기", "X선 형광", "고고학적 분석", "고대 기술"]
     },
     {
       id: 4,
-      title: "Climate Change Impact on Museum Collections",
-      description: "Assessment of environmental risks and development of adaptive conservation strategies for museum artifacts.",
-      category: "Environmental Studies",
+      title: "박물관 소장품에 대한 기후변화 영향",
+      description: "박물관 유물에 대한 환경 위험 평가 및 적응적 보존 전략 개발",
+      category: "환경연구",
       status: "ongoing",
       duration: "2024-2027",
-      team: ["Dr. Sarah Chen", "Emma Thompson", "Dr. Michael Rodriguez"],
-      keywords: ["Climate Change", "Museum Collections", "Risk Assessment", "Preventive Conservation"]
+      team: ["김연구 교수", "박보존 석사과정", "이분석 박사"],
+      keywords: ["기후변화", "박물관 소장품", "위험 평가", "예방적 보존"]
     }
   ];
 
   const categories = [
-    { id: "all", label: "All Projects" },
-    { id: "Digital Heritage", label: "Digital Heritage" },
-    { id: "Materials Science", label: "Materials Science" },
-    { id: "Archaeological Science", label: "Archaeological Science" },
-    { id: "Environmental Studies", label: "Environmental Studies" }
+    { id: "all", label: "전체 프로젝트" },
+    { id: "디지털 문화유산", label: "디지털 문화유산" },
+    { id: "재료과학", label: "재료과학" },
+    { id: "고고과학", label: "고고과학" },
+    { id: "환경연구", label: "환경연구" }
   ];
 
   const filteredProjects = activeCategory === "all" 
@@ -79,11 +79,11 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Research Projects
+            연구 프로젝트
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our interdisciplinary research projects advance the field of conservation science 
-            through innovative methodologies and collaborative approaches.
+            학제간 연구 프로젝트는 혁신적인 방법론과 협력적 접근을 통해
+            보존과학 분야의 발전을 이끌어갑니다.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ const ProjectsSection = () => {
                     variant={project.status === "ongoing" ? "default" : "secondary"}
                     className={project.status === "ongoing" ? "bg-accent text-accent-foreground" : ""}
                   >
-                    {project.status === "ongoing" ? "Ongoing" : "Completed"}
+                    {project.status === "ongoing" ? "진행중" : "완료"}
                   </Badge>
                   <Badge variant="outline" className="border-primary/20 text-primary">
                     {project.category}
@@ -165,7 +165,7 @@ const ProjectsSection = () => {
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  View Details
+                  자세히 보기
                 </Button>
               </CardContent>
             </Card>

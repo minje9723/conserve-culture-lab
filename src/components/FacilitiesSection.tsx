@@ -123,11 +123,11 @@ const FacilitiesSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Facilities & Equipment
+            연구 시설 및 장비
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            State-of-the-art instrumentation and facilities supporting advanced research 
-            in conservation science and cultural heritage analysis.
+            보존과학 및 문화유산 분석의 첨단 연구를 지원하는 
+            최첨단 장비와 시설을 보유하고 있습니다.
           </p>
         </div>
 

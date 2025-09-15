@@ -50,6 +50,8 @@ export default {
         csl: {
           section: "var(--csl-section-bg)",
           text: "var(--csl-text-light)",
+          glass: "var(--csl-glass-bg)",
+          'glass-border': "var(--csl-glass-border)",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -66,6 +68,7 @@ export default {
         'csl-hero': 'var(--csl-hero-bg)',
         'csl-overlay': 'var(--csl-hero-overlay)',
         'csl-gradient': 'var(--csl-gradient-accent)',
+        'csl-logo': 'var(--csl-logo-gradient)',
       },
       boxShadow: {
         'csl-card': 'var(--csl-card-shadow)',
