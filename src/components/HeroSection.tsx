@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Microscope, Users, Lightbulb } from "lucide-react";
 import heroImage from "@/assets/hero-lab.jpg";
+import cslLogo from "@/assets/csl-logo.png";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -11,23 +12,49 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
-      {/* Background Image with Overlay */}
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background with Logo Integration */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Conservation Science Laboratory"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-csl-overlay"></div>
+        <div className="absolute inset-0 bg-csl-hero"></div>
+        
+        {/* Logo Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-96 h-96 opacity-20">
+            <img
+              src={cslLogo}
+              alt="CSL Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="absolute bottom-20 left-10 w-64 h-64 opacity-15 rotate-12">
+            <img
+              src={cslLogo}
+              alt="CSL Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+        
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-csl-logo-overlay"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-primary-foreground">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Conservation Science Lab
-          </h1>
+          {/* Logo and Title */}
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-32 h-32 md:w-40 md:h-40 mb-6 drop-shadow-lg">
+              <img
+                src={cslLogo}
+                alt="Conservation Science Lab Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-csl-logo-gradient bg-clip-text text-transparent">
+              Conservation Science Lab
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
             Advancing cultural heritage preservation through scientific research, 
             innovation, and collaboration. Dedicated to sustainability and cultural value.

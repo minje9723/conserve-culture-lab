@@ -66,6 +66,8 @@ export default {
         'csl-hero': 'var(--csl-hero-bg)',
         'csl-overlay': 'var(--csl-hero-overlay)',
         'csl-gradient': 'var(--csl-gradient-accent)',
+        'csl-logo-gradient': 'var(--csl-logo-gradient)',
+        'csl-logo-overlay': 'var(--csl-logo-overlay)',
       },
       boxShadow: {
         'csl-card': 'var(--csl-card-shadow)',
