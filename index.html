@@ -1,30 +1,425 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conservation Science Lab - Cultural Heritage Preservation Research</title>
-    <meta name="description" content="Advancing cultural heritage preservation through scientific research, innovation, and collaboration. Leading conservation science laboratory with state-of-the-art facilities." />
-    <meta name="author" content="Conservation Science Lab" />
-    <meta name="keywords" content="conservation science, cultural heritage, preservation, research, materials analysis, archaeology, museum" />
-
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Conservation Science Lab - Cultural Heritage Preservation" />
-    <meta property="og:description" content="Advanced research in conservation science and cultural heritage preservation through scientific innovation." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@csl_research" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화재 보존과학 연구실 - Cultural Heritage Conservation Science Lab</title>
+    <meta name="description" content="과학적 연구, 혁신, 협력을 통한 문화재 보존 발전. 최첨단 시설을 갖춘 선도적인 보존과학 연구실입니다.">
+    <meta name="keywords" content="보존과학, 문화재, 보존, 연구, 재료분석, 고고학, 박물관">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://csl-research.lovable.app" />
-  </head>
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="문화재 보존과학 연구실 - Cultural Heritage Conservation">
+    <meta property="og:description" content="과학적 혁신을 통한 보존과학 및 문화재 보존 분야의 첨단 연구">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-container">
+                        <img src="assets/csl-logo.png" alt="CSL Logo" class="logo-img">
+                    </div>
+                    <div class="logo-text">
+                        <h1>문화재 보존과학 연구실</h1>
+                        <p>Cultural Heritage Conservation Science</p>
+                    </div>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <a href="#home" onclick="scrollToSection('#home')">홈</a>
+                    <a href="#team" onclick="scrollToSection('#team')">연구팀</a>
+                    <a href="#projects" onclick="scrollToSection('#projects')">연구 프로젝트</a>
+                    <a href="#achievements" onclick="scrollToSection('#achievements')">연구 성과</a>
+                    <a href="#facilities" onclick="scrollToSection('#facilities')">연구 시설</a>
+                    <a href="#gallery" onclick="scrollToSection('#gallery')">갤러리</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav id="mobile-nav" class="mobile-nav">
+                <a href="#home" onclick="scrollToSection('#home'); toggleMobileMenu()">홈</a>
+                <a href="#team" onclick="scrollToSection('#team'); toggleMobileMenu()">연구팀</a>
+                <a href="#projects" onclick="scrollToSection('#projects'); toggleMobileMenu()">연구 프로젝트</a>
+                <a href="#achievements" onclick="scrollToSection('#achievements'); toggleMobileMenu()">연구 성과</a>
+                <a href="#facilities" onclick="scrollToSection('#facilities'); toggleMobileMenu()">연구 시설</a>
+                <a href="#gallery" onclick="scrollToSection('#gallery'); toggleMobileMenu()">갤러리</a>
+            </nav>
+        </div>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="assets/csl-logo.png" alt="CSL Logo" class="hero-logo-img">
+                </div>
+                <h1 class="hero-title">문화재 보존과학의 혁신</h1>
+                <h2 class="hero-subtitle">과학적 연구를 통한 문화유산 보존의 새로운 패러다임</h2>
+                
+                <div class="hero-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>과학적 연구</h3>
+                        <p>첨단 분석 기술을 활용한 문화재 보존 연구</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>혁신 기술</h3>
+                        <p>새로운 보존 방법론과 기술 개발</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>국제 협력</h3>
+                        <p>글로벌 네트워크를 통한 지식 공유</p>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToSection('#team')">연구팀 소개</button>
+                    <button class="btn-secondary" onclick="scrollToSection('#projects')">연구 프로젝트</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>연구팀</h2>
+                <p>문화재 보존과학 분야의 전문가들로 구성된 우리 연구팀을 소개합니다</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="assets/director-portrait.jpg" alt="연구소장" class="team-image">
+                    <div class="team-info">
+                        <h3>김문화</h3>
+                        <p class="team-position">연구소장</p>
+                        <p class="team-bio">문화재 보존과학 분야에서 20년 이상의 경험을 가진 전문가로, 국제적으로 인정받는 연구 성과를 보유하고 있습니다.</p>
+                        <div class="team-expertise">
+                            <span class="expertise-tag">재료과학</span>
+                            <span class="expertise-tag">X선 분석</span>
+                            <span class="expertise-tag">고고학</span>
+                        </div>
+                        <a href="mailto:director@csl.ac.kr" class="team-contact">연락하기</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <img src="assets/postdoc-portrait.jpg" alt="박사후연구원" class="team-image">
+                    <div class="team-info">
+                        <h3>이보존</h3>
+                        <p class="team-position">선임연구원</p>
+                        <p class="team-bio">첨단 분석 기법을 활용한 문화재 진단 및 보존 처리 기술 개발에 전문성을 가지고 있습니다.</p>
+                        <div class="team-expertise">
+                            <span class="expertise-tag">분광분석</span>
+                            <span class="expertise-tag">미생물학</span>
+                            <span class="expertise-tag">보존처리</span>
+                        </div>
+                        <a href="mailto:researcher@csl.ac.kr" class="team-contact">연락하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>연구 프로젝트</h2>
+                <p>현재 진행중인 주요 연구 프로젝트들입니다</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all')">전체</button>
+                <button class="filter-btn" onclick="filterProjects('material-analysis')">재료 분석</button>
+                <button class="filter-btn" onclick="filterProjects('conservation')">보존 기술</button>
+                <button class="filter-btn" onclick="filterProjects('digital-heritage')">디지털 헤리티지</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="material-analysis">
+                    <div class="project-header">
+                        <h3>고대 청동기 성분 분석 연구</h3>
+                        <span class="project-status ongoing">진행중</span>
+                    </div>
+                    <p class="project-description">XRF 및 SEM-EDS를 활용한 한국 고대 청동기의 제작 기술과 원료 산지 추정 연구</p>
+                    <div class="project-meta">
+                        <span class="project-category">재료 분석</span>
+                        <span class="project-duration">2023-2025</span>
+                    </div>
+                    <div class="project-team">연구진: 김문화, 이보존</div>
+                    <div class="project-keywords">
+                        <span class="keyword-tag">청동기</span>
+                        <span class="keyword-tag">XRF</span>
+                        <span class="keyword-tag">고고학</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="conservation">
+                    <div class="project-header">
+                        <h3>석조문화재 생물학적 손상 방지 기술</h3>
+                        <span class="project-status ongoing">진행중</span>
+                    </div>
+                    <p class="project-description">미생물 증식 억제를 위한 친환경 보존 처리제 개발 및 적용 연구</p>
+                    <div class="project-meta">
+                        <span class="project-category">보존 기술</span>
+                        <span class="project-duration">2024-2026</span>
+                    </div>
+                    <div class="project-team">연구진: 이보존, 김문화</div>
+                    <div class="project-keywords">
+                        <span class="keyword-tag">석조문화재</span>
+                        <span class="keyword-tag">미생물</span>
+                        <span class="keyword-tag">보존처리</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="digital-heritage">
+                    <div class="project-header">
+                        <h3>3D 스캔을 활용한 문화재 디지털 아카이브</h3>
+                        <span class="project-status planning">계획중</span>
+                    </div>
+                    <p class="project-description">고해상도 3D 스캔 기술을 이용한 문화재 디지털 보존 및 활용 방안 연구</p>
+                    <div class="project-meta">
+                        <span class="project-category">디지털 헤리티지</span>
+                        <span class="project-duration">2025-2027</span>
+                    </div>
+                    <div class="project-team">연구진: 김문화</div>
+                    <div class="project-keywords">
+                        <span class="keyword-tag">3D스캔</span>
+                        <span class="keyword-tag">디지털보존</span>
+                        <span class="keyword-tag">가상현실</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>연구 성과</h2>
+                <p>우리 연구실의 주요 연구 성과와 업적들입니다</p>
+            </div>
+            
+            <div class="achievements-filter">
+                <button class="filter-btn active" onclick="filterAchievements('all')">전체</button>
+                <button class="filter-btn" onclick="filterAchievements('publications')">📚 논문</button>
+                <button class="filter-btn" onclick="filterAchievements('awards')">🏆 수상</button>
+                <button class="filter-btn" onclick="filterAchievements('presentations')">🎤 발표</button>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card" data-type="publications">
+                    <div class="achievement-header">
+                        <h3>고대 청동기 제작 기술 연구</h3>
+                        <span class="achievement-badge publications">논문</span>
+                        <span class="achievement-year">2024</span>
+                    </div>
+                    <p class="achievement-authors">김문화, 이보존</p>
+                    <p class="achievement-venue">Journal of Archaeological Science</p>
+                    <p class="achievement-description">XRF와 SEM-EDS 분석을 통한 삼국시대 청동기의 제작 기술과 원료 산지 연구</p>
+                    <p class="achievement-impact"><strong>영향력:</strong> 인용수 23회, Impact Factor 3.2</p>
+                </div>
+                
+                <div class="achievement-card" data-type="awards">
+                    <div class="achievement-header">
+                        <h3>우수 연구상</h3>
+                        <span class="achievement-badge awards">수상</span>
+                        <span class="achievement-year">2023</span>
+                    </div>
+                    <p class="achievement-authors">김문화</p>
+                    <p class="achievement-venue">한국문화재보존과학회</p>
+                    <p class="achievement-description">문화재 보존과학 분야의 혁신적 연구 성과를 인정받아 우수 연구상을 수상</p>
+                </div>
+                
+                <div class="achievement-card" data-type="presentations">
+                    <div class="achievement-header">
+                        <h3>국제 보존과학 심포지엄 기조강연</h3>
+                        <span class="achievement-badge presentations">발표</span>
+                        <span class="achievement-year">2024</span>
+                    </div>
+                    <p class="achievement-authors">김문화</p>
+                    <p class="achievement-venue">International Conservation Science Symposium</p>
+                    <p class="achievement-description">동아시아 문화재 보존과학의 현재와 미래에 대한 기조강연 발표</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section facilities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>연구 시설</h2>
+                <p>최첨단 분석 장비와 연구 시설을 보유하고 있습니다</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <img src="assets/xrf-equipment.jpg" alt="XRF 분석 장비" class="facility-image">
+                    <div class="facility-info">
+                        <div class="facility-header">
+                            <h3>X선 형광분석기 (XRF)</h3>
+                            <span class="facility-category">분석 장비</span>
+                            <span class="availability-badge available">사용 가능</span>
+                        </div>
+                        <p class="facility-description">문화재의 원소 성분을 비파괴적으로 분석할 수 있는 최첨단 XRF 장비입니다.</p>
+                        <div class="facility-specs">
+                            <h4>주요 사양</h4>
+                            <ul>
+                                <li>검출 원소: Na(11) ~ U(92)</li>
+                                <li>측정 시간: 10초 ~ 10분</li>
+                                <li>검출 한계: 0.1% 이하</li>
+                            </ul>
+                        </div>
+                        <div class="facility-applications">
+                            <h4>주요 활용 분야</h4>
+                            <ul>
+                                <li>금속 문화재 성분 분석</li>
+                                <li>안료 및 도료 분석</li>
+                                <li>도자기 태토 분석</li>
+                            </ul>
+                        </div>
+                        <button class="facility-booking-btn">예약하기</button>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <img src="assets/sem-equipment.jpg" alt="SEM 분석 장비" class="facility-image">
+                    <div class="facility-info">
+                        <div class="facility-header">
+                            <h3>주사전자현미경 (SEM-EDS)</h3>
+                            <span class="facility-category">현미경</span>
+                            <span class="availability-badge maintenance">점검중</span>
+                        </div>
+                        <p class="facility-description">고해상도 미세구조 관찰과 원소 분석이 가능한 주사전자현미경입니다.</p>
+                        <div class="facility-specs">
+                            <h4>주요 사양</h4>
+                            <ul>
+                                <li>해상도: 1.2nm (30kV), 2.5nm (1kV)</li>
+                                <li>배율: 10× ~ 800,000×</li>
+                                <li>EDS 검출기 내장</li>
+                            </ul>
+                        </div>
+                        <div class="facility-applications">
+                            <h4>주요 활용 분야</h4>
+                            <ul>
+                                <li>미세구조 관찰</li>
+                                <li>표면 분석</li>
+                                <li>입자 크기 측정</li>
+                            </ul>
+                        </div>
+                        <button class="facility-booking-btn" disabled>점검중</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>갤러리</h2>
+                <p>연구 활동과 성과를 사진으로 만나보세요</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" onclick="filterGallery('all')">전체</button>
+                <button class="filter-btn" onclick="filterGallery('lab')">연구실</button>
+                <button class="filter-btn" onclick="filterGallery('fieldwork')">현장조사</button>
+                <button class="filter-btn" onclick="filterGallery('conferences')">학회</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="lab" onclick="openLightbox('assets/hero-lab.jpg', '연구실 전경', '최첨단 분석 장비가 구비된 연구실의 모습입니다.')">
+                    <img src="assets/hero-lab.jpg" alt="연구실 전경" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>연구실 전경</h4>
+                        <p>2024.03.15</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="fieldwork" onclick="openLightbox('assets/fieldwork-gallery.jpg', '현장 조사', '문화재 현장에서의 보존과학 조사 활동 모습입니다.')">
+                    <img src="assets/fieldwork-gallery.jpg" alt="현장 조사" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>현장 조사</h4>
+                        <p>2024.02.20</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="lab" onclick="openLightbox('assets/xrf-equipment.jpg', 'XRF 분석 중', 'X선 형광분석기를 이용한 문화재 분석 과정입니다.')">
+                    <img src="assets/xrf-equipment.jpg" alt="XRF 분석" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>XRF 분석 중</h4>
+                        <p>2024.01.10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>연락처</h3>
+                    <p>📧 info@csl.ac.kr</p>
+                    <p>📞 +82-2-1234-5678</p>
+                    <p>📍 서울특별시 종로구 대학로 123</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>바로가기</h3>
+                    <a href="#team">연구팀</a>
+                    <a href="#projects">연구 프로젝트</a>
+                    <a href="#achievements">연구 성과</a>
+                    <a href="#facilities">연구 시설</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>연구실 정보</h3>
+                    <p>설립: 2020년</p>
+                    <p>연구 분야: 문화재 보존과학</p>
+                    <p>소속: 문화재보존학과</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 문화재 보존과학 연구실. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
