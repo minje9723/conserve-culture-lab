@@ -1,3 +1,21 @@
+// Prezi-style Page Load Animation
+document.addEventListener('DOMContentLoaded', function() {
+    // Show body after a short delay
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 100);
+    
+    // Trigger entrance animations with staggered delays
+    setTimeout(() => {
+        const preziElements = document.querySelectorAll('.prezi-entrance, .prezi-slide-up, .prezi-slide-right, .prezi-slide-left');
+        preziElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('animate');
+            }, index * 150);
+        });
+    }, 800);
+});
+
 // Mobile Navigation
 function toggleMobileMenu() {
     const mobileNav = document.getElementById('mobile-nav');
