@@ -63,8 +63,12 @@ body {
     line-height: 1.6;
     color: var(--gray-800);
     background: var(--white);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+body.loading {
+    opacity: 0;
 }
 
 body.loaded {

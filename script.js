@@ -1,7 +1,11 @@
 // Prezi-style Page Load Animation
 document.addEventListener('DOMContentLoaded', function() {
+    // Add loading class initially for smooth entrance
+    document.body.classList.add('loading');
+    
     // Show body after a short delay
     setTimeout(() => {
+        document.body.classList.remove('loading');
         document.body.classList.add('loaded');
     }, 100);
     
@@ -13,7 +17,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.classList.add('animate');
             }, index * 150);
         });
-    }, 800);
+    }, 300);
+    
+    // Initialize animated elements
+    const animatedElements = document.querySelectorAll('.team-card, .project-card, .achievement-card, .facility-card, .gallery-item');
+    animatedElements.forEach(element => {
+        element.classList.add('fade-in');
+        observer.observe(element);
+    });
+    
+    // Mobile menu close on link click
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.remove('show');
+            mobileMenuBtn.classList.remove('active');
+        });
+    });
+    
+    // Initialize section animations
+    initializeSectionAnimations();
 });
 
 // Mobile Navigation
@@ -50,6 +76,15 @@ window.addEventListener('scroll', function() {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
+    }
+    
+    // Parallax effect for hero section
+    const scrolledY = window.pageYOffset;
+    const heroBackground = document.querySelector('.hero-background');
+    
+    if (heroBackground) {
+        const speed = scrolledY * 0.5;
+        heroBackground.style.transform = `translateY(${speed}px)`;
     }
 });
 
@@ -121,7 +156,7 @@ function filterGallery(category) {
 
 // Lightbox functionality
 function openLightbox(imageSrc, title, description) {
-    const lightbox = document.getElementById('lightbox');
+    const lightbox = document.querySelector('.lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxTitle = document.getElementById('lightbox-title');
     const lightboxDescription = document.getElementById('lightbox-description');
@@ -135,12 +170,20 @@ function openLightbox(imageSrc, title, description) {
 }
 
 function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
+    const lightbox = document.querySelector('.lightbox');
     lightbox.classList.remove('show');
     document.body.style.overflow = 'auto';
 }
 
-// Close lightbox with Escape key
+// Close lightbox on outside click
+document.addEventListener('click', function(e) {
+    const lightbox = document.querySelector('.lightbox');
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+// Close lightbox on Escape key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeLightbox();
@@ -161,61 +204,29 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Add fade-in class to animated elements
-    const animatedElements = document.querySelectorAll('.team-card, .project-card, .achievement-card, .facility-card, .gallery-item');
-    
-    animatedElements.forEach(element => {
-        element.classList.add('fade-in');
-        observer.observe(element);
-    });
-    
-    // Add mobile menu close on link click
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const mobileNav = document.getElementById('mobile-nav');
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            
-            mobileNav.classList.remove('show');
-            mobileMenuBtn.classList.remove('active');
+// Initialize section animations
+function initializeSectionAnimations() {
+    const revealSections = document.querySelectorAll('.section');
+    const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
         });
+    }, {
+        threshold: 0.15
     });
-});
 
-// Parallax effect for hero section
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroBackground = document.querySelector('.hero-background');
-    
-    if (heroBackground) {
-        const speed = scrolled * 0.5;
-        heroBackground.style.transform = `translateY(${speed}px)`;
-    }
-});
-
-// Smooth reveal animations for sections
-const revealSections = document.querySelectorAll('.section');
-const revealObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    revealSections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        revealObserver.observe(section);
     });
-}, {
-    threshold: 0.15
-});
+}
 
-revealSections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    revealObserver.observe(section);
-});
-
-// Add loading animation
+// Add loading animation on window load
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
